@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>音乐播放器</title>
+	    <style>
+		    *{
+		    	margin: 0;
+		    	padding: 0;
+		    }
+		    
+	        article{
+	            width: 800px;
+	            margin: 0 auto;
+	            border-radius: 10px;
+	            border: 4px solid #008AFF;
+	            margin: 100px auto;
+	        }
+	        
+	        input{
+	        	outline: none;
+	            border: none;
+	            outline-style: none;
+	        }
+	        
+	        .lrcBox{
+	            min-height: 44px;
+	        }
+		
+	        .volumeRange{
+	            width: 98%;
+	        }
+	        
+	        .lrcBox,.songName{
+	        	margin-top: 10px;
+	        	text-align: center;
+	        	font-weight: bold;
+	        }
+	        
+	        .playerControlBox{
+	        	width: 220px;
+	        	margin: 0 auto;
+	        }
+	        
+	        .playerControlBox :first-child{
+	        	padding-bottom: 5px;
+	        }
+	        
+	        .playerControlBox input{
+	        	margin-left: 10px;
+	        }
+	        
+	        .playerTimeControlBox span{
+	            width: 10%;
+	        }
+	
+	        .playerTimeControlBox input{
+	            width: 87%;
+	        }
+	    </style>
+	</head>
+	<body>
+		<article>
+		    <h2 class="songName">res/songs/董小姐.mp3</h2>
+		
+		    <section class="lrcBox"></section>
+		
+		    <section class="playerTimeControlBox">
+		        <span class="startTime">00:00</span>
+		        <input class="inpt" type="range" value="0">
+		        <span class="endTime">00:00</span>
+		    </section>
+		
+		    <section class="playerControlBox">
+		        <input type="image" width="30px" class="xunhuan" src="res/img/single.png">
+		        <input type="image" src="res/img/skip_last.png" class="backButton" width="40px">
+		        <input type="image" src="res/img/pause.png" width="40px" class="playButton">
+		        <input type="image" src="res/img/skip_next.png" class="nextButton" width="40px">
+		    </section>
+		
+		    <input type="range" class="volumeRange" value="100">
+		
+		</article>
+	</body>
+</html>
+<script src="js/LRCReader.js"></script>
+<script src="js/TimeTools.js"></script>
+<script src="js/AudioPlayer.js"></script>
+<script src="js/Player.js"></script>
+<script src="js/App.js"></script>
